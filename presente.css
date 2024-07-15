@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+.interface{
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+
+section{
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+
+
+
+
+/* PAGE01 Fazendo o alinhamento dos elementos */
+.page01{
+    display: flex;
+    flex-direction: column; /* itens dispostos em uma coluna, de cima para baixo. */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Fazendo o fundo */
+.page01{
+    background-image: linear-gradient(to bottom, #FF0A54, #FF477E, #FF5C8A);
+    overflow: hidden;
+}
+
+/* Estilizando o texto da PAGE01*/
+.page01 h1{
+    color: transparent;
+    -webkit-text-stroke: 4px rgb(0, 0, 0);
+    font-weight: bolder;
+    font-size: 115px;
+}
+
+.page01 p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fafafa;
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 24px;
+    letter-spacing: 7px;
+    text-shadow: rgba(187,167,241,1) 0px 0px 15px;
+}
+
+
+
+
+
+/* PAGE02 Fazendo o alinhamento dos elementos */
+.page02{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Fazendo o fundo */
+.page02{
+    background: #FF5C8A;
+    overflow: hidden;
+}
+
+
+/* Estilizando o texto da PAGE02*/
+.page02 h1{
+    font-weight: bolder;
+    font-size: 55px;
+    color: transparent;
+    -webkit-text-stroke: 2px rgb(0, 0, 0);
+}
+
+
+.page02 p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fafafa;
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 24px;
+    letter-spacing: 4px;
+    margin-top: 15px;
+    text-shadow: rgba(187,167,241,1) 0px 0px 15px;
+}
+
+
+
+
+/* PAGE03 Fazendo o alinhamento dos elementos */
+.page03{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Fazendo o fundo */
+.page03{
+    background-image: linear-gradient(to top, #FF0A54, #FF477E, #FF5C8A);
+    overflow: hidden;
+}
+
+/* Estilizando o texto da PAGE02*/
+.page03 h1{
+    font-weight: bolder;
+    font-size: 46px;
+}
+
+
+
+
+/* PAGE04 Fazendo o alinhamento dos elementos */
+.page04{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Fazendo o fundo */
+.page04{
+    background-image: linear-gradient(to bottom, #FF0A54, #FF0A54, #771935);
+    overflow: hidden;
+}
+
+.txt-animado{
+    margin-top: 20px;
+    margin-bottom: -15px;
+    font-size: 40px;
+    color: transparent;
+    -webkit-text-stroke: 2px rgb(0, 0, 0);
+}
+
+
+.txt-animado span{
+    position: relative;
+    color: #fafafa;
+    -webkit-text-stroke: 0px rgb(0, 0, 0);
+}
+
+.txt-animado span::before{
+    content: "";
+    color: #fafafa;
+    animation: palavras 25s infinite;
+}
+
+.txt-animado span::after{
+    content: "";
+    position: absolute;
+    height: 95%;
+    border-left: 3px solid #fafafa;
+    right: -10px;
+    animation: cursor .8s infinite, digita 25s steps(10) infinite;
+    width: calc(100% + 20px);
+    background-color: #FF0A54;
+    
+}
+
+@keyframes digita {
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%{
+        width: 0;
+    }
+    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%{
+        width: calc(100% + 20px);
+    }
+}
+
+@keyframes cursor {
+    0%{
+        border-left: 2px solid #FF0A54;
+    }
+}
+
+@keyframes palavras{
+    0%,20%{
+        content: "Beatriz";
+    }
+    21%,40%{
+        content: "Vidinha";
+    }
+    41%,60%{
+        content: "Biazinha";
+    }
+    61%,80%{
+        content: "Amor . . .";
+    }
+    81%,100%{
+        content: "Bia . . .";
+    }
+}
+
+
+
+.page04 p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fafafa;
+    font-weight: lighter;
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin-top: 15px
+}
+
+.page04 img{
+    width: 500px;
+    height: 650px;
+    margin: 30px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+/* PAGE05 Fazendo o alinhamento dos elementos */
+.page05{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Fazendo o fundo */
+.page05{
+    background-image: linear-gradient(to bottom, #771935,#771935, #FF0A54);
+    overflow: hidden;
+    position: relative; /* Define o contexto de posicionamento */
+    padding-bottom: 50px; /* Espaço para o footer */
+}
+
+.botao{
+    background-image: linear-gradient(45deg, #FF0A54, #FF477E, #FF5C8A, #FF7096);
+    background-size: 500% 100%;
+    overflow: hidden;
+    padding: 15px 40px;
+    border-radius: 15px;
+    cursor: pointer;
+    -webkit-box-shadow:0px 0px 20px 7px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 20px 7px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 20px 7px rgba(0,0,0,0.2);
+}
+
+.botao a{
+    font-size: 22px;
+    color: #fafafa;
+    text-decoration: none;
+}
+
+/* Animação de profundidade do botão*/
+@keyframes animacao-botao {
+    0%{
+        transform: scale(1);
+    }
+
+    100%{
+        transform: scale(1.05);
+    }
+}
+
+/* Aplicando a animação de profundidade */
+.botao:hover{
+    animation-name: animacao-botao;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.main-footer{
+    height: 18%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0000004f;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.main-footer p{
+    font-size: 16px;
+    color: #fafafa4f;
+    font-style: italic;
+}
+
+.main-footer a{
+    color: rgba(137, 141, 202, 0.466);
+}
